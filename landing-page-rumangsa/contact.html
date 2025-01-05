@@ -70,20 +70,17 @@
             <div class="input-container">
                 <div class="input-50">
                     <div>
-                        <input type="text" class="input-style" placeholder="Nama Anda">
+                        <input type="text" class="input-style" placeholder="Nama Anda" id="name">
                     </div>
                     <div>
-                        <input type="email" class="input-style" placeholder="Email Anda">
+                        <input type="email" class="input-style" placeholder="Email Anda" id="email">
                     </div>
                 </div>
                 <div class="input-group">
-                    <input type="text" class="input-style" placeholder="Subjek">
+                    <textarea placeholder="Tuliskan Pesan Anda" id="message"></textarea>
                 </div>
                 <div class="input-group">
-                    <textarea placeholder="Tuliskan Pesan Anda"></textarea>
-                </div>
-                <div class="input-group">
-                    <button>Kirim Pesan</button>
+                    <button onclick="sendEmail()">Kirim Pesan</button>
                 </div>
             </div>
             <aside>
@@ -166,6 +163,18 @@
             </div>
         </div>
     </footer>
+
+    <!-- Script Untuk Melakukan Send Email -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "0bU4dr6PgptWyzAOm",
+            });
+        })();
+    </script>
+
     <script src="assets/styles/main.js"></script>
     <script src="assets/Boostrap/js/bootstrap.js"></script>
 </body>

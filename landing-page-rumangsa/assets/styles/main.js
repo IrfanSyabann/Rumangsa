@@ -97,3 +97,31 @@ function choiceBtn(btnName) {
         console.log("No Have Choice!!!")
     }
 }
+
+// --- Email Area --- //
+function sendEmail() {
+    let email = [
+        document.getElementById('name').value,
+        document.getElementById('email').value,
+        document.getElementById('message').value
+    ]
+
+    let params = {
+        name: email[0],
+        email: email[1],
+        message: email[2],
+    }
+
+    emailjs.send("service_repad3l", "template_tplmaq7", params).then(
+        (res) => {
+            alert("SUCCESS SEND MAIL")
+        },
+        (err) => {
+            alert("FAILED SEND MAIL")
+        }
+    )
+
+    document.getElementById('name').value = ""
+    document.getElementById('email').value = ""
+    document.getElementById('message').value = ""
+}
