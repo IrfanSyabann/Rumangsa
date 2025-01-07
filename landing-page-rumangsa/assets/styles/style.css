@@ -273,7 +273,6 @@ h1 {
 main#index {
     background-image: url("../image/img3.jpg");
     background-size: 100% 100%;
-    filter: blur(2px);
     animation: fade-in 1s ease-in-out 1;
     transition: all 0.3s ease-in-out;
 }
