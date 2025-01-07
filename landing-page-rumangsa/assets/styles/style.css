@@ -303,14 +303,14 @@ main#index:hover {
     transform: scale(1.05);
 }
 
-.item button{
+.item button {
     text-align: center;
     background: white;
     border-radius: 1em;
-    border-color:black;
+    border-color: black;
 }
 
-.item button a{
+.item button a {
     text-decoration: none;
     color: black;
 }
@@ -808,6 +808,12 @@ textarea::placeholder {
 
     .copyrights p {
         margin-block: auto;
+    }
+}
+
+@media screen and (max-height: 720px) {
+    #about .content {
+        font-size: 15px;
     }
 }
 
